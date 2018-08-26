@@ -34,7 +34,7 @@ namespace TaskManager.Test
             apiController.Request = new HttpRequestMessage();
             apiController.Configuration = new HttpConfiguration();
 
-            IHttpActionResult actionResult = apiController.GetTaskById(8);
+            IHttpActionResult actionResult = apiController.GetTaskById(1);
             if (((System.Web.Http.Results.StatusCodeResult)actionResult).StatusCode != HttpStatusCode.NotFound)
             {
                 var contentResult = actionResult as OkNegotiatedContentResult<Tasks>;
@@ -70,12 +70,14 @@ namespace TaskManager.Test
         public void TestUpdateTask()
         {
             var apiController = new TaskManagerController();
+
             DataLayer.Tasks t = new Tasks();
             t.Task = "FSD Capsule";
             t.Parent__ID = null;
             t.Priority = 22;
             t.Start_Date = Convert.ToDateTime("2018-08-08");
             t.End_Date = Convert.ToDateTime("2018-11-11");
+
             IHttpActionResult actionResult = apiController.UpdateTask(t);
             Assert.IsNotNull(actionResult);
             Assert.AreEqual(HttpStatusCode.OK, ((System.Web.Http.Results.StatusCodeResult)actionResult).StatusCode);
@@ -88,7 +90,7 @@ namespace TaskManager.Test
         {
             var apiController = new TaskManagerController();
             DataLayer.Tasks t = new Tasks();
-            t.Task_ID = 9;
+            t.Task_ID = 5;
             t.Task = "FSD Capsule";
             t.Parent__ID = null;
             t.Priority = 22;

@@ -31,8 +31,8 @@ namespace TaskManager.WebAPI.Controllers
             {
                 tasks = taskBL.GetTasks();
             }
-            catch (Exception ex)
-            { throw ex; }
+            catch
+            { return tasks; }
             return tasks;
         }
 
@@ -79,9 +79,9 @@ namespace TaskManager.WebAPI.Controllers
 
                 tasks = taskBL.GetTask(task, parentTask, priorityFrom, priorityTo, Convert.ToDateTime(startDate), Convert.ToDateTime(endDate));
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                return tasks;
             }
             return tasks;
         }

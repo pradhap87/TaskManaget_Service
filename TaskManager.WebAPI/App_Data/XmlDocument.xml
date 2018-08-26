@@ -4,6 +4,17 @@
         <name>TaskManager.WebAPI</name>
     </assembly>
     <members>
+        <member name="T:TaskManager.WebAPI.WebApiConfig">
+            <summary>
+            Web API Config
+            </summary>
+        </member>
+        <member name="M:TaskManager.WebAPI.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Http Configuration
+            </summary>
+            <param name="config"></param>
+        </member>
         <member name="M:TaskManager.WebAPI.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
@@ -535,6 +546,46 @@
             </summary>
             <param name="t"></param>
             <returns></returns>
+        </member>
+        <member name="T:TaskManager.WebAPI.Models.TaskServiceModel">
+            <summary>
+            Task Manager Model Class
+            </summary>
+        </member>
+        <member name="P:TaskManager.WebAPI.Models.TaskServiceModel.Task_ID">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TaskManager.WebAPI.Models.TaskServiceModel.Parent__ID">
+            <summary>
+            Parent task ID
+            </summary>
+        </member>
+        <member name="P:TaskManager.WebAPI.Models.TaskServiceModel.Task">
+            <summary>
+            Task Description
+            </summary>
+        </member>
+        <member name="P:TaskManager.WebAPI.Models.TaskServiceModel.Start_Date">
+            <summary>
+            Task Start Date
+            </summary>
+        </member>
+        <member name="P:TaskManager.WebAPI.Models.TaskServiceModel.End_Date">
+            <summary>
+            Task End Date
+            </summary>
+        </member>
+        <member name="P:TaskManager.WebAPI.Models.TaskServiceModel.Priority">
+            <summary>
+            Task Prioriry
+            </summary>
+        </member>
+        <member name="P:TaskManager.WebAPI.Models.TaskServiceModel.Parent_Task">
+            <summary>
+            Parent task Model
+            </summary>
         </member>
     </members>
 </doc>

@@ -6,8 +6,15 @@ using System.Web.Http;
 
 namespace TaskManager.WebAPI
 {
+    /// <summary>
+    /// Web API Config
+    /// </summary>
     public static class WebApiConfig
     {
+        /// <summary>
+        /// Http Configuration
+        /// </summary>
+        /// <param name="config"></param>
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
