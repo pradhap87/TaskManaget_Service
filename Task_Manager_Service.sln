@@ -11,10 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.WebAPI", "TaskM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Test", "TaskManager.Test\TaskManager.Test.csproj", "{845259FE-1CF3-4230-A168-0E01024B3592}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.LoadTest", "TaskManager.LoadTest\TaskManager.LoadTest.csproj", "{E4BE533D-A090-4B93-B957-DCCDDB821020}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AFAABFDE-89CC-4A22-B9C9-8551C14D0C8F}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
 Global
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -36,8 +40,15 @@ Global
 		{845259FE-1CF3-4230-A168-0E01024B3592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845259FE-1CF3-4230-A168-0E01024B3592}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845259FE-1CF3-4230-A168-0E01024B3592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4BE533D-A090-4B93-B957-DCCDDB821020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BE533D-A090-4B93-B957-DCCDDB821020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BE533D-A090-4B93-B957-DCCDDB821020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BE533D-A090-4B93-B957-DCCDDB821020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

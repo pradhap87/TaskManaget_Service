@@ -147,9 +147,9 @@ namespace TaskManager.WebAPI.Controllers
             {
                 taskBL.DeleteTask(t);
             }
-            catch (Exception ex)
+            catch
             {
-                return BadRequest(ex.Message);
+                return StatusCode(HttpStatusCode.BadRequest);
             }
 
             return StatusCode(HttpStatusCode.OK);

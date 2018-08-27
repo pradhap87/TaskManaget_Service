@@ -90,12 +90,14 @@ namespace TaskManager.Test
         {
             var apiController = new TaskManagerController();
             DataLayer.Tasks t = new Tasks();
-            t.Task_ID = 5;
+            t.Task_ID = 10;
+            t.Task_ID = t.Task_ID+1; 
             t.Task = "FSD Capsule";
             t.Parent__ID = null;
-            t.Priority = 22;
+            t.Priority = 10;
             t.Start_Date = Convert.ToDateTime("2018-08-08");
-            t.End_Date = Convert.ToDateTime("2018-11-11");
+            t.End_Date = Convert.ToDateTime("2018-10-10");
+            
             IHttpActionResult actionResult = apiController.DeleteTask(t);
             Assert.IsNotNull(actionResult);
             Assert.AreEqual(HttpStatusCode.OK, ((System.Web.Http.Results.StatusCodeResult)actionResult).StatusCode);
